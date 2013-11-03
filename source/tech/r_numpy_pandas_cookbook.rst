@@ -490,7 +490,7 @@ R::
 
 Python::
 
-    #
+    help('modules')
 
 3.9 - Installing Packages from CRAN
 ----------------------------------------------------------------------
@@ -501,7 +501,7 @@ R::
 
 Python::
 
-    #
+    pip install packagename
 
 3.10 - Setting a Default CRAN Mirror
 ----------------------------------------------------------------------
@@ -512,7 +512,12 @@ R::
 
 Python::
 
-    #
+put
+
+[global]
+index-url = http://d.pypi.python.org/simple
+
+Into ~/.pip/pip.conf.
 
 3.11 - Suppressing the Startup Message
 ----------------------------------------------------------------------
@@ -729,7 +734,7 @@ R::
 
 Python::
 
-    df = pd.read_csv('http://www.justinmrao.com/salary_data.csv'
+    df = pd.read_csv('http://www.justinmrao.com/salary_data.csv')
 
 4.11 - Reading Data from HTML Tables
 ----------------------------------------------------------------------
@@ -860,7 +865,7 @@ R::
 
 Python::
 
-    #
+    x = []
 
 5.7 - Selecting List Elements by Position
 ----------------------------------------------------------------------
@@ -871,7 +876,9 @@ R::
 
 Python::
 
-    #
+    # x = [5,4,3,2,1]
+    y = x[1]   # y = 4
+    y = x[4]   # y = 1
 
 5.8 - Selecting List Elements by Name
 ----------------------------------------------------------------------
@@ -893,7 +900,7 @@ R::
 
 Python::
 
-    #
+    x = { 'name1' : 1 , 'name2' : 2 , 'name3' : 3 }
 
 5.10 - Removing an Element from a List
 ----------------------------------------------------------------------
@@ -904,7 +911,8 @@ R::
 
 Python::
 
-    #
+    # x = [3,5,7,9]
+    del x.[2]         # x = [3,5,9]
 
 5.11 - Flatten a List into a Vector
 ----------------------------------------------------------------------
@@ -926,7 +934,8 @@ R::
 
 Python::
 
-    #
+    # x = [1, Nil, 2, Nil, 3, Nil, 4, Nil, 6]
+    x.remove(Nil)  # x = [1, 2, Nil, 3, Nil, 4, Nil, 6]
 
 5.13 - Removing List Elements Using a Condition
 ----------------------------------------------------------------------
@@ -937,7 +946,8 @@ R::
 
 Python::
 
-    #
+    # x = [1, Nil, 2, Nil, 3, Nil, 4, Nil, 6]
+    x = [value for value in x if value]     # x = [1, 2, 3, 4, 6]
 
 5.14 - Initializing a Matrix
 ----------------------------------------------------------------------
@@ -1439,7 +1449,14 @@ R::
 
 Python::
 
-    #
+    import itertools
+    for x in  itertools.combinations('ABC',2):
+        print x
+
+#('A', 'B')
+#('A', 'C')
+#('B', 'C')
+
 
 8.3 - Generating Random Numbers
 ----------------------------------------------------------------------
